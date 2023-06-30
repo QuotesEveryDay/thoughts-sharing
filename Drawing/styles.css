@@ -1,0 +1,97 @@
+html, body {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #controls {
+    margin-bottom: 20px;
+  }
+  
+  #canvasContainer {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  canvas {
+    border: 1px solid #ccc;
+  }
+  
+  #savedDrawingsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .savedDrawing {
+    width: 200px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    position: relative;
+  }
+  
+  .savedDrawing:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border: 2px solid red;
+    display: none;
+  }
+  
+  .savedDrawing.showBorder:before {
+    display: block;
+  }
+  
+  .savedDrawing img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .savedDrawingName {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  .deleteButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #drawingName {
+    margin-left: 10px;
+  }
+  
+  .show {
+    display: block;
+  }
+  
